@@ -15,14 +15,41 @@
   .accordion-cstm {
     min-width: 35rem;
     background: #fff;
-    padding: 0.75rem 0.5rem 0 0.5rem;
+    padding: 0.75rem 0.5rem;
     box-shadow: 0 0 15px rgb(0, 0, 0);
-    border-radius: 5px;
+    border-radius:0 0 5px 5px;
     overflow: hidden;
+    z-index: 1;
+  }
+
+  .left {
+    display: flex;
+    justify-content: flex-start;
+    flex: 1;
+  }
+
+  .right{ 
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+  }
+
+  .arrow {
+    transition: all 250ms ease-in-out;
+    margin: 0 -0.5rem 0 0.5rem;
+    color: #1da1f2;
+  }
+
+  .company {
+    font-weight: 700;
+    border-bottom: #000 1px solid;
+    width: fit-content;
   }
 
   .accordion__button {
-    display: block;
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     padding: 15px;
     border: none;
@@ -35,16 +62,10 @@
     margin-top: 0;
   }
 
-  .accordion__button::after {
-    content: "\25be";
-    float: right;
-    transform: scale(1.5);
-  }
-
   .accordion__content {
     overflow: hidden;
     max-height: 0px;
-    transition: max-height 250ms;
+    transition: max-height 350ms ease-in-out;
     padding: 0 15px;
     max-width: 35rem;
   }
@@ -54,19 +75,24 @@
   }
   
   .accordion__content::-webkit-scrollbar-track {
-    background: hsl(0, 0%, 97%);
+    background: 	#f7f7f7;
   }
   
   .accordion__content::-webkit-scrollbar-thumb {
-    background: hsl(0, 0%, 73%)	;
+    background: #bababa	;
     border-radius: 500px;
     width: 50%;
   }
 
   .app-tracker-title {
-    background-color: var(--secondary-color);
+    text-align: center;
+    background-color: var(--primary-color);
     color: #fff;
-    padding: 0.5rem 10.1rem 0.5rem 10.1rem;
+    padding: 0.5rem auto;
+    margin-bottom: 0;
+    z-index: 9999;
+    width: 36rem;
+    border-radius: 5px 5px 0 0;
   }
 
   .button-container {
@@ -89,19 +115,68 @@
 }
 
 @media screen and (max-width: 768px) {
+  .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    background: url("https://source.unsplash.com/390x254/?landscape,road") !important;
+    background-repeat: no-repeat;
+    background-size: auto;
+    height: 254px;
+    width: 100vw;
+    color: #fff;
+    position: relative;
+  }
+
+  .nav h2 {
+    margin: 2rem auto auto auto !important;
+    background-color: var(--primary-color);
+    padding: 0 1rem;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 2rem;
+  }
+
   .accordion-cstm {
-    min-width: 15rem;
+    min-width: 22rem;
     background: #fff;
-    padding: 0.75rem 0.5rem 0 0.5rem;
+    padding: 0.75rem 0.5rem;
     box-shadow: 0 0 15px rgb(0, 0, 0);
-    border-radius: 5px;
-    overflow: scroll;
-    max-height: 100%;
+    border-radius:0 0 5px 5px;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .left {
+    display: flex;
+    justify-content: flex-start;
+    flex: 1;
+  }
+
+  .right{ 
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+  }
+
+  .arrow {
+    transition: all 250ms ease-in-out;
+    margin: 0 -0.5rem 0 0.5rem;
+    color: #1da1f2;
+  }
+
+  .company {
+    font-weight: 700;
+    border-bottom: #000 1px solid;
+    width: fit-content;
   }
 
   .accordion__button {
-    display: block;
-    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    width: 21rem;
     padding: 15px;
     border: none;
     outline: none;
@@ -109,44 +184,44 @@
     background-color: #fff;
     color: #000;
     text-align: left;
-    transition: background 250ms;
-    margin-top: -12px;
+    transition: background 250ms ease;
+    margin-top: 0;
   }
 
   .accordion__content {
     overflow: hidden;
     max-height: 0px;
-    transition: max-height 250ms;
+    line-height: 1.5;
+    transition: max-height 350ms ease-in-out;
+    width: 20rem;
     padding: 0 15px;
-    max-width: 35rem;
   }
 
   .accordion__content::-webkit-scrollbar {
-    width: 0.35rem;
+    width: 0.5rem;
   }
   
   .accordion__content::-webkit-scrollbar-track {
-    /* background: hsl(0, 0%, 97%); */
-    opacity: 0 !important;
+    background: 	#f7f7f7;
   }
   
   .accordion__content::-webkit-scrollbar-thumb {
-    background: hsl(0, 0%, 73%)	;
+    background: #bababa	;
     border-radius: 500px;
     width: 50%;
   }
 
-  .accordion__button::after {
-    content: "\25be";
-    float: right;
-    transform: scale(1.5);
-  }
-
   .app-tracker-title {
-    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--primary-color);
     color: #fff;
-    padding: 0.5rem 4.25rem 0.5rem 4.25rem;
-
+    padding: 0.5rem 11rem;
+    margin-bottom: 0;
+    z-index: 9999;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
   }
 
   .button-container {
@@ -165,6 +240,13 @@
 
   #search {
     margin: 0 1rem 1rem 0;
+    padding: 0;
+  }
+
+  .filterSearchBtn {
+    padding: -10rem 1rem !important;
+    margin: 1rem 0!important;
+    transform: translateY(-1rem);
   }
 }
 
@@ -182,9 +264,8 @@
   background: rgba(0, 0, 0, 0.1);
 }
 
-.accordion__button--active::after {
-  content: "\25b4";
-  transform: scale(1.5);
+.accordion__button--active > .right > .arrow {
+  transform: rotate(180deg);
 }
 
 .container {
@@ -550,14 +631,16 @@ float-right {
 .pending {
   background-color: var(--secondary-color);
   width: 6px;
+  height: 6px;
   aspect-ratio: 1;
   border-radius: 100%;
   display: inline-block;
-  margin: 0 0.25rem 0.05rem 0;
+  margin: auto 0.25rem auto 0;
 }
 .submitted {
   background-color: #FFDD00;
   width: 6px;
+  height: 6px;
   aspect-ratio: 1;
   border-radius: 100%;
   display: inline-block;
@@ -566,6 +649,7 @@ float-right {
 .accepted {
   background-color: #00D118;
   width: 6px;
+  height: 6px;
   aspect-ratio: 1;
   border-radius: 100%;
   display: inline-block;
@@ -574,6 +658,7 @@ float-right {
 .declined {
   background-color: #FF0000;
   width: 6px;
+  height: 6px;
   aspect-ratio: 1;
   border-radius: 100%;
   display: inline-block;

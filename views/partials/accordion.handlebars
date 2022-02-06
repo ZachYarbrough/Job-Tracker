@@ -1,6 +1,18 @@
 <div>
-    
-    <button id="{{id}}" class="accordion__button" type="button"><div class="dot-div" style="float: left;"></div><div style="float: left;">{{jobTitle}}</div></button>
+    <button id="{{id}}" class="accordion__button" type="button">
+        <div class="left">
+            <div class="dot-div"></div>
+            <div>{{jobTitle}}</div>
+        </div>
+        <div class="right">
+            <div class="arrow">
+                <i class="fa fa-chevron-circle-down" aria-hidden="true" id='arrow'></i>
+            </div>
+            <div class="company">
+                {{companyName}}
+            </div>
+        </div>
+    </button>
     
     <div class="accordion__content">
         <h4 class="company_Name">{{companyName}}</h4>
