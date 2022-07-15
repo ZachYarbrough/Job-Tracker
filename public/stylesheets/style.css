@@ -121,8 +121,8 @@
     justify-content: center;
     align-items: flex-end;
     background: url("https://source.unsplash.com/390x254/?landscape,road") !important;
-    background-repeat: no-repeat;
-    background-size: auto;
+    background-repeat: no-repeat !important;
+    background-size: 100vw !important;
     height: 254px;
     width: 100vw;
     color: #fff;
@@ -750,4 +750,8 @@ float-right {
   height: 416px;
   border-radius: 15px;
   margin: 2rem;
+}
+
+.custom-margin {
+  margin-top: -5rem !important;
 }

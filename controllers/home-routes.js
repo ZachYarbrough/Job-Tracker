@@ -55,6 +55,11 @@ router.get('/signup', (req, res) => {
 //Renders the jobs template
 router.get('/jobs', (req, res) => {
     res.render('jobs');
-})
+});
+
+//Renders the devs template
+router.get('/devs', (req, res) => {
+    res.render('devs.handlebars');
+});
 
 module.exports = router;
